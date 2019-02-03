@@ -1,4 +1,4 @@
-bool isPalindrome(string s)
+bool IsPalindrome(string s)
 {
     int start = 0;
     int end = s.Length - 1;
@@ -16,4 +16,11 @@ bool isPalindrome(string s)
         return true;
 
     return false;
+}
+
+static void Main(string[] args)
+{
+    Program obj = new Program();
+    Console.WriteLine(obj.IsPalindrome("kshitij"));
+    Console.ReadLine();
 }

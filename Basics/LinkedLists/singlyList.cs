@@ -1,6 +1,9 @@
+//represents a Linked List node
 public class ListNode {
     public int val;
     public ListNode next;
+
+    //Constructor
     public ListNode(int x) { 
         val = x; 
     }

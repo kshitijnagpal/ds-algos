@@ -1,14 +1,12 @@
-bool isPalindrome(int num)
+
+bool IsPalindrome(int num)
 {
     int result = 0;
-    int temp = 0;
     int orgNum = num;
 
     while (num != 0)
     {
-        result = result * 10;
-        temp = num % 10;
-        result = result + temp;
+        result = result * 10 + num % 10;
         num = num / 10;
     }
 
@@ -17,3 +15,12 @@ bool isPalindrome(int num)
 
     return false;
 }
+
+static void Main(string[] args)
+{
+    Program obj = new Program();
+    Console.WriteLine(obj.IsPalindrome(145));
+
+    Console.ReadLine();
+}
+    
