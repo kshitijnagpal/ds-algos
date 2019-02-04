@@ -1,5 +1,5 @@
 //iterative
-char [] reverse(char[] str)
+char[] reverse(char[] str)
 {
     int start = 0;
     int end = str.Length - 1;
@@ -18,6 +18,21 @@ char [] reverse(char[] str)
     return str;
 }
 
+
+static void Main(string[] args)
+{
+    Program obj = new Program();
+
+    char[] str = new char[]
+    {
+                'k', 's', 'h', 'i', 't', 'i', 'j'
+    };
+
+    Console.WriteLine(obj.reverse(str));
+    Console.ReadLine();
+}
+
+////////////////////////////////////////////////////////////////////
 //Recursive
 string reverse(string str)
 {

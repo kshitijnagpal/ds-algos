@@ -1,6 +1,8 @@
 int myAtoi(string str)
 {
-    int i = 0, isNeg = 0, num = 0, sign = 1, result = 0;
+    int i = 0,
+        num = 0,
+        sign = 1;
 
     int length = str.Length;
     int backup;
@@ -23,10 +25,10 @@ int myAtoi(string str)
     }
 
     //using isdigit to check for non-digit characters - "4193 with words"
-    while (i<length && Char.IsNumber(str[i]))
+    while (i < length && Char.IsNumber(str[i]))
     {
         backup = num;
-        num = num * 10 + (str[i] - '0');//ASCII Value of '0' is 48
+        num = num * 10 + (str[i] - '0'); //ASCII Value of '0' is 48
 
         //check for overflow!!!
         if (num < 0 || backup != (num - (str[i] - '0')) / 10)
@@ -38,4 +40,11 @@ int myAtoi(string str)
     }
 
     return num * sign;
+}
+
+static void Main(string[] args)
+{
+    Program obj = new Program();
+    Console.WriteLine(obj.myAtoi("1236"));
+    Console.ReadLine();
 }
