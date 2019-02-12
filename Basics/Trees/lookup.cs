@@ -7,6 +7,7 @@ public class TreeNode {
     }
 }
 
+//recursive
 public int lookup(TreeNode root, int target)
 {
     if (root == null)

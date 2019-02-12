@@ -1,3 +1,4 @@
+//LNR
 void inorder(TreeNode root)
 {
     if (root != null)
@@ -7,6 +8,7 @@ void inorder(TreeNode root)
         inorder(root.right);
     }
 }
+//NLR
 void preorder(TreeNode root)
 {
     if (root != null)
@@ -17,6 +19,7 @@ void preorder(TreeNode root)
     }
 }
 
+//LRN
 void postorder(TreeNode root)
 {
     if (root != null)

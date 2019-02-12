@@ -2,7 +2,7 @@
 
 class Node {
     bool visited;
-    Node[] adjacent;
+    Node[] adjacent; //array of Nodes
     int val;
 }
 void search(Node root) {
