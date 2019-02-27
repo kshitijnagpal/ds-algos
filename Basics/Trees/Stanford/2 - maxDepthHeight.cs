@@ -1,4 +1,5 @@
-//Max-depth/height
+//Given a binary tree, compute its "maxDepth" -- the number of nodes along the longest path from the root node down to the farthest leaf node.
+
 public int MaxDepth(TreeNode root)
 {
     if (root == null)

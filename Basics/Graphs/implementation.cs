@@ -1,5 +1,4 @@
     //adjacency list implementation
-    
     class Program
     {
         void AddEdge(List<int>[] adj, int u, int v)

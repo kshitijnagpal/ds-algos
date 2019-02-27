@@ -11,11 +11,16 @@ void search(Node root) {
 
     //visit root
     Console.WriteLine(root.val);
+
+    //mark visited
     root.visited = true;
 
+    //visit neighbors
     foreach(Node node in root.adjacent) {
         if(node.visited == false) {
             search(node);
         }
     }
 }
+
+

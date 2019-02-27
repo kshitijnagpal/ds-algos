@@ -1,4 +1,5 @@
-//Find number of nodes
+//This problem demonstrates simple binary tree traversal. Given a binary tree, count the number of nodes in the tree.
+
 int size(TreeNode root)
 {
     if (root == null)
