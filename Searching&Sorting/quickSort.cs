@@ -14,6 +14,7 @@ void quickSort(int[] arr, int left, int right) {
     }
 }
 
+//helper
 int partition(int[] arr, int left, int right) {
     int pivot = arr[(left+right)/2];
 

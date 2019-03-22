@@ -1,5 +1,4 @@
 //uses recursion - stack
-
 class Node {
     bool visited;
     Node[] adjacent; //array of Nodes

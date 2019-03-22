@@ -1,3 +1,5 @@
+
+//naive implementation
 public IList<string> FizzBuzz(int n) {
     IList<string> result = new List<string>();
 
@@ -21,5 +23,34 @@ public IList<string> FizzBuzz(int n) {
 
     }
 
+    return result;
+}
+
+//using string concatenation
+public IList<string> FizzBuzz(int n)
+{
+    IList<string> result = new List<string>();
+
+    for (int i = 1; i <= n; i++)
+    {
+        bool divisibleby3 = (i % 3 == 0);
+        bool divisibleby5 = (i % 5 == 0);
+        string resultStr = string.Empty;
+
+        if (divisibleby3)
+        {
+            resultStr += "Fizz";
+        }
+        if (divisibleby5)
+        {
+            resultStr += "Buzz";
+        }
+        if (resultStr == string.Empty)
+        {
+            resultStr += i.ToString();
+        }
+
+        result.Add(resultStr);
+    }
     return result;
 }
