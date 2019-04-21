@@ -1,3 +1,4 @@
+//Complexity  - O(logn)
 //iterative
 int binarySearch(int[]a, int x) {
     int low = 0;
