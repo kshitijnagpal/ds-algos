@@ -7,7 +7,7 @@ public class TreeNode {
     }
 }
 
-//recursive
+//recursive - Time: O(h), Space: O(h), where h is the height of the tree
 public int lookup(TreeNode root, int target)
 {
     if (root == null)
@@ -23,10 +23,10 @@ public int lookup(TreeNode root, int target)
     }
 }
 
-//iterative
+//iterative - Time: O(h), Space: O(1)
 public int lookup(TreeNode root, int target)
 {
-    while(1) {
+    while(root!=null) {
         if(root.val == target) {
             return root.val;
         }
@@ -38,5 +38,5 @@ public int lookup(TreeNode root, int target)
         }
     }
 
-    return -1; //not found
+    return root; //not found
 }

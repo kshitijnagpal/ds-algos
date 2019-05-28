@@ -31,3 +31,50 @@ void postorder(TreeNode root)
 }
 
 
+//Iterative
+
+//PreOrder
+public List<int> PreOrderTraversal(TreeNode root)
+{
+    List<int> answer = new List<int>();
+    Stack<TreeNode> stack = new Stack<TreeNode>();
+    if (root != null)
+        stack.Push(root);
+
+    TreeNode cur;
+    while (stack.Count != 0)
+    {
+        cur = stack.Pop();
+        answer.Add(cur.val); //visit root
+        //push right child
+        if (cur.right != null)
+            stack.Push(cur.right);
+        //push left child
+        if (cur.left != null)
+            stack.Push(cur.left);
+    }
+    return answer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Complexity Analysis
+//Time: O(N) ; Space: O(N)
+
+
+//level order traversal
+
+
+

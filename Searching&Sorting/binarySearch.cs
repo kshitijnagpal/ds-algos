@@ -1,16 +1,17 @@
 //Complexity  - O(logn)
+
 //iterative
-int binarySearch(int[]a, int x) {
+int binarySearch(int[]a, int target) {
     int low = 0;
     int high = a.Length - 1;
     int mid;
 
     while(low<=high) {
         mid = (low+high)/2;
-        if(a[mid] > x) {
+        if(a[mid] > target) {
             high = mid - 1;
         }
-        else if (a[mid] < x) {
+        else if (a[mid] < target) {
             low = mid + 1;
         }
         else {
@@ -21,7 +22,6 @@ int binarySearch(int[]a, int x) {
     //not found
     return -1;
 }
-
 
 //recursive
 int binarySearch(int[] a, int x, int low, int high) {
@@ -39,4 +39,37 @@ int binarySearch(int[] a, int x, int low, int high) {
     else {
         return mid;
     }
+}
+
+//Template 2 (Leetcode)
+int binarySearch(int[] nums, int target)
+{
+    if (nums == null || nums.Length == 0)
+        return -1;
+
+    int left = 0, right = nums.Length;
+
+    while (left < right)
+    {
+        int mid = left + (right - left) / 2;
+
+        if (nums[mid] == target)
+            return mid;
+
+        else if (nums[mid] < target)
+        {
+            left = mid + 1;
+        }
+
+        else
+        {
+            right = mid;
+        }
+    }
+
+    //Post processing
+    if (left != nums.Length && nums[left] == target)
+        return left;
+
+    return -1;
 }

@@ -7,6 +7,7 @@ public class TreeNode
     TreeNode(int x) { val = x; }
 }
 
+//Complexity - O(h) and O(logN) ideally
 public TreeNode insert(TreeNode root, int data)
 {
     if(root==null)

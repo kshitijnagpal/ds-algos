@@ -1,11 +1,28 @@
     //adjacency list implementation
     class Program
     {
+        public class Graph
+        {
+            public int vertex;
+            public List<int>[] adjList;
+
+            public Graph(int vertex)
+            {
+                this.vertex = vertex;
+                adjList = new List<int>[vertex];
+
+                //init
+                for (int i = 0; i < vertex; i++)
+                {
+                    adjList[i] = new List<int>();
+                }
+            }
+        }
+
         void AddEdge(List<int>[] adj, int u, int v)
         {
             adj[u].Add(v);
             adj[v].Add(u);
-
         }
 
         void PrintGraph(List<int>[]adj)
@@ -19,28 +36,22 @@
                 }
             }
         }
-
+        
         static void Main(string[] args)
         {
             Program obj = new Program();
+            Graph graph = new Graph(5);
+            
 
-            List<int>[] adj = new List<int>[5];
+            obj.AddEdge(graph.adjList, 0, 1);
+            obj.AddEdge(graph.adjList, 0, 4);
+            obj.AddEdge(graph.adjList, 1, 2);
+            obj.AddEdge(graph.adjList, 1, 3);
+            obj.AddEdge(graph.adjList, 1, 4);
+            obj.AddEdge(graph.adjList, 2, 3);
+            obj.AddEdge(graph.adjList, 3, 4);
 
-            adj[0] = new List<int>();
-            adj[1] = new List<int>();
-            adj[2] = new List<int>();
-            adj[3] = new List<int>();
-            adj[4] = new List<int>();
-
-            obj.AddEdge(adj, 0, 1);
-            obj.AddEdge(adj, 0, 4);
-            obj.AddEdge(adj, 1, 2);
-            obj.AddEdge(adj, 1, 3);
-            obj.AddEdge(adj, 1, 4);
-            obj.AddEdge(adj, 2, 3);
-            obj.AddEdge(adj, 3, 4);
-
-            obj.PrintGraph(adj);
+            obj.PrintGraph(graph.adjList);
 
             Console.ReadLine();
         }
