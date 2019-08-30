@@ -1,4 +1,4 @@
-//Complexity  - O(logn)
+//Complexity  - Time: O(logn), Space: O(1)
 
 //iterative
 int binarySearch(int[]a, int target) {
@@ -24,17 +24,17 @@ int binarySearch(int[]a, int target) {
 }
 
 //recursive
-int binarySearch(int[] a, int x, int low, int high) {
+int binarySearch(int[] a, int target, int low, int high) {
     if(low>high){
         return -1;
     }
 
     int mid = (low+high)/2;
-    if(a[mid] < x) {
-        binarySearch(a, x, mid+1, high);
+    if(a[mid] < target) {
+        return binarySearch(a, target, mid+1, high);
     }
     else if (a[mid] > x) {
-        binarySearch(a, x, low, mid-1);
+        return binarySearch(a, target, low, mid-1);
     }
     else {
         return mid;
