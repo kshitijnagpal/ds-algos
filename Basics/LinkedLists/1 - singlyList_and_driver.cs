@@ -9,6 +9,27 @@ public class ListNode {
     }
 }
 
+//Helper function create lists
+public ListNode GetList()
+{
+    int num = 0;
+    int data = 0;
+    ListNode head = null;
+
+    Console.WriteLine("Enter no. of elements");
+    num = Convert.ToInt32(Console.ReadLine());
+
+    for (int i = 0; i < num; i++)
+    {
+        data = Convert.ToInt32(Console.ReadLine());
+        ListNode newNode = new ListNode(data);
+        newNode.next = head;
+        head = newNode;
+    }
+
+    return head;
+}
+
 public static void Main(string[] args)
 {
     Solution obj = new Solution();
